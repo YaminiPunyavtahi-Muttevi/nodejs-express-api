@@ -1,22 +1,58 @@
 {
+  
   "name": "my-express-api",
+  
   "version": "1.0.0",
+  
   "main": "index.js",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+  
+    
+  "test": "echo \"Error: no test specified\" && exit 1",
+  
+    
+  "start": "nodemon index.js"
+  
   },
+  
   "keywords": [],
+  
   "author": "",
+  
   "license": "ISC",
+  
   "description": "",
+  
   "dependencies": {
-    "express": "^4.21.1",
-    "index.js": "^0.0.3",
-    "touch": "^3.1.1",
-    "uuidv4": "^6.2.13"
+  
+    
+  "express": "^4.21.1",
+  
+    
+  "got": "^11.1.3",
+  
+    
+  "index.js": "^0.0.3",
+  
+    
+  "nock": "^0.39.0",
+  
+    
+  "superagent": "^10.1.1",
+  
+    
+  "touch": "^3.1.1",
+  
+    
+  "uuidv4": "^6.2.13"
+  
   },
+  
   "devDependencies": {
-    "nodemon": "^3.1.7"
+  
+    
+  "nodemon": "^3.1.7"
+  
   }
 }

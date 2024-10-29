@@ -41,4 +41,4 @@ const updateItem = (req, res) => {
   );
 };
 
-module.exports = { getItem, addItem, getItemId, deleteItem, updateItem };
+module.exports = { getItem, addItem, getItemId, deleteItem, updateItem};
