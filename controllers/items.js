@@ -28,13 +28,13 @@ const deleteItem = (req, res) => {
 
 const updateItem = (req, res) => {
   const { id } = req.params;
-  const { name, toppings, price } = req.body;
+  const { label, value } = req.body;
 
   const item = itemData.find((item) => item.id === id);
 
-  if (name) item.name = name;
-  if (toppings) item.toppings = toppings;
-  if (price) item.price = price;
+  if (label) item.label = label;
+  if (value) item.value = value;
+  
 
   res.send(
     `Item with id ${id} and name ${item.name} has been updated successfully`
