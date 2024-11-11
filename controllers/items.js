@@ -12,12 +12,12 @@ const addItem = (req, res) => {
   res.send(`Item "${item.name}" has been added successfully.`);
 };
 
-const getItemId = (req, res) => {
+/* const getItemId = (req, res) => {
  // const { id } = req.params;
   //const itemFound = itemData.find((item) => item.id === id);
-  console.log(itemFound);
-  res.send(itemFound);
-};
+  //console.log(itemFound);
+  //res.send(itemFound);
+}; */
 
 const deleteItem = (req, res) => {
   //const { id } = req.params;
@@ -41,4 +41,12 @@ const updateItem = (req, res) => {
   );
 };
 
-module.exports = { getItem, addItem, getItemId, deleteItem, updateItem};
+const getAllItems = (req,res)=> {
+
+  
+  res.json(itemData);
+
+};
+
+module.exports = { getItem, addItem, deleteItem, updateItem,getAllItems};
+
