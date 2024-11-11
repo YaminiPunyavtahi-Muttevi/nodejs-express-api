@@ -8,7 +8,7 @@ const getItem = (req, res) => {
 
 const addItem = (req, res) => {
   const item = req.body;
-  itemData.push({ ...item, id: v4() });
+  //itemData.push({ ...item, id: v4() });
   res.send(`Item "${item.name}" has been added successfully.`);
 };
 
