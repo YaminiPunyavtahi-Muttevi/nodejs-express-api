@@ -1,5 +1,6 @@
 
 const express = require("express");
+var cors = require('cors');
 const bodyParser = require("body-parser");
 
 // routes
@@ -15,11 +16,6 @@ app.use("/items", itemRoutes);
 
 app.use("/apidata", apiRoutes);
 
-app.UseCors(x => x
-  .AllowAnyMethod()
-  .AllowAnyHeader()
-  .SetIsOriginAllowed(origin => true) // allow any origin
-  .AllowCredentials());
 
 app.listen(port, () => {
   console.log(`Server started at port http://localhost:${port}`);
