@@ -4,7 +4,7 @@ const router = express.Router();
 const {
   getItem,
   addItem,
-  //getItemId,
+  getItemId,
   deleteItem,
   updateItem,
   getAllItems,
@@ -15,7 +15,7 @@ router.get("/", getItem);
 
 router.post("/", addItem);
 
-//router.get("/:id", getItemId);
+router.get("/:id", getItemId);
 
 router.delete("/:id", deleteItem);
 
