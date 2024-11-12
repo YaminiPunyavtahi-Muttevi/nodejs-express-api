@@ -7,7 +7,7 @@ const {
   getItemId,
   deleteItem,
   updateItem,
-  getAllItems,
+ // getAllItems,
  
 } = require("../controllers/items");
 
@@ -21,7 +21,7 @@ router.delete("/:id", deleteItem);
 
 router.put("/:id", updateItem);
 
-router.get("/getAllItems", getAllItems);
+//router.get("/getAllItems", getAllItems);
 
 
 module.exports = router;

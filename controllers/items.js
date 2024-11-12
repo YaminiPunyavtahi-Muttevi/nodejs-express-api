@@ -41,12 +41,12 @@ const updateItem = (req, res) => {
   );
 };
 
-const getAllItems = (req,res)=> {
+/* const getAllItems = (req,res)=> {
 
   
   res.json(itemData);
 
 };
-
-module.exports = { getItem, addItem, deleteItem, updateItem,getAllItems};
+ */
+module.exports = { getItem, getItemId,addItem, deleteItem, updateItem};
 
