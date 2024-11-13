@@ -9,7 +9,7 @@ const getItem = (req, res) => {
 const addItem = (req, res) => {
   const item = req.body;
   itemData.push({ ...item, id: v4() });
-  res.send(`Item "${item.name}" has been added successfully.`);
+  res.send(`Item "${item.label}" has been added successfully.`);
 };
 
 const getItemId = (req, res) => {
@@ -37,7 +37,7 @@ const updateItem = (req, res) => {
   if (value) item.value= value;
 
   res.send(
-    `Item with id ${id} and name ${item.name} has been updated successfully`
+    `Item with id ${id} and name ${item.label} has been updated successfully`
   );
 };
 
