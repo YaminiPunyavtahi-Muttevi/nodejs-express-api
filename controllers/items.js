@@ -8,16 +8,16 @@ const getItem = (req, res) => {
 
 const addItem = (req, res) => {
   const item = req.body;
-  itemData.push({ ...item });
+  itemData.push({ ...item, id: v4() });
   res.send(`Item "${item.name}" has been added successfully.`);
 };
 
 const getItemId = (req, res) => {
- const { id } = req.params;
+  const { id } = req.params;
   const itemFound = itemData.find((item) => item.id === id);
   console.log(itemFound);
   res.send(itemFound);
-}; 
+};
 
 const deleteItem = (req, res) => {
   const { id } = req.params;
@@ -28,25 +28,17 @@ const deleteItem = (req, res) => {
 
 const updateItem = (req, res) => {
   const { id } = req.params;
-  const { label, value } = req.body;
-  
+  const { name, toppings, price } = req.body;
+
   const item = itemData.find((item) => item.id === id);
 
-  if (label) item.label = label;
-  if (value) item.value = value;
-  
+  if (name) item.name = name;
+  if (toppings) item.toppings = toppings;
+  if (price) item.price = price;
 
   res.send(
-    `Item with name ${item.name} has been updated successfully`
+    `Item with id ${id} and name ${item.name} has been updated successfully`
   );
 };
 
-/* const getAllItems = (req,res)=> {
-
-  
-  res.json(itemData);
-
-};
- */
-module.exports = { getItem, getItemId,addItem, deleteItem, updateItem};
-
+module.exports = { getItem, addItem, getItemId, deleteItem, updateItem };
