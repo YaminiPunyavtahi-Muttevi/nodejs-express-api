@@ -9,7 +9,7 @@ const getItem = (req, res) => {
 const addItem = (req, res) => {
   const item = req.body;
   itemData.push({ ...item, id: v4() });
-  res.send(`Item "${item.label}" has been added successfully.`);
+  res.send(`Item "${item.CarModelName}" has been added successfully.`);
 };
 
 const getItemId = (req, res) => {
@@ -28,16 +28,19 @@ const deleteItem = (req, res) => {
 
 const updateItem = (req, res) => {
   const { id } = req.params;
-  const { label, value } = req.body;
+  const { CarModelName, CarModelCode, CityName, CityCode, ModelImage  } = req.body;
 
   const item = itemData.find((item) => item.id === id);
 
   
-  if (label) item.label = label;
-  if (value) item.value= value;
+  if (CarModelName) item.CarModelName = CarModelName;
+  if (CarModelCode) item.CarModelCode = CarModelCode;
+if(CityName) item.CityName = CityName;
+if(CityCode) item.CityCode = CityCode;
+if(ModelImage) item.ModelImage = ModelImage;
 
   res.send(
-    `Item with id ${id} and name ${item.label} has been updated successfully`
+    `Item with id ${id} and name ${item.CarModelName} has been updated successfully`
   );
 };
 

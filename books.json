@@ -1,24 +1,10 @@
 {
-  "books": {
-    "book": [
-       {
-        "id": "1",
-        "title": "Test1",
-        "author": "atest1"
-        
-      },
-      {
-        "id": "2",
-        "title": "test2",
-        "author": "atest2"
-        
-      },
-      {
-        "id": "3",
-        "title": "Test3",
-        "author": "atest3"
-        
-      }
-    ]
+  "id":"1",
+  "CarModelName": "Toyota Corolla",
+  "CarModelCode":"Corolla",
+  "CityName":"Jeddah,Makkah,AI Khobar,Riyadh",
+  "CityCode":"Jeddah,Makkah,AI Khobar, Riyadh",
+  "ModelImage":"https://www.toyota.com.sa/-/media/feature/toyotaksa/vehicle/passenger/crown/t2.png"
+  
+  
   }
-}
